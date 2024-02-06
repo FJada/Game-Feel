@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class StartScreen : MonoBehaviour
 {
 
     // Start is called before the first frame update
@@ -14,7 +14,10 @@ public class GameController : MonoBehaviour
     void Update()
     {
 
-       
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Level");
+        }
     }
 }
 
