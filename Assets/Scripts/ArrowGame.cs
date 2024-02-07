@@ -21,13 +21,13 @@ public class ArrowGame : MonoBehaviour
     public float time = 0;
     public bool playing = true;
     public bool complete = false;
-
-    public TextMesh timeUI;
+    public HealthScript healthScript;
 
     void Start()
     {
         DontDestroyOnLoad(timeLimit);
-        timeUI.text = time.ToString("F");
+
+        healthScript.SetMaxHealth(timeLimit.limit);
 
         pos = 1-arrowCount;
         arrowIndex = 0;
@@ -60,11 +60,12 @@ public class ArrowGame : MonoBehaviour
                 BallResult((arrowIndex) / arrowCount);
                 Debug.Log(arrowIndex/arrowCount);
                 timeLimit.count++;
-                timeLimit.limit = (timeLimit.limit/2 + 1);
+                timeLimit.limit = (timeLimit.limit/2f + 0.3f);
                 playing = false;
                 SceneManager.LoadScene("Game");
             }
             time -= Time.deltaTime;
+            healthScript.SetHealth(time);
         }
     }
 
