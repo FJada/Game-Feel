@@ -60,7 +60,7 @@ public class ArrowGame : MonoBehaviour
                 BallResult((arrowIndex) / arrowCount);
                 Debug.Log(arrowIndex/arrowCount);
                 timeLimit.count++;
-                timeLimit.limit = (timeLimit.limit/2f + 0.3f);
+                timeLimit.limit = (timeLimit.limit/1.5f + 0.3f);
                 playing = false;
                 SceneManager.LoadScene("Game");
             }

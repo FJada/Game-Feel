@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\TimeProperties.cs" />
     <Compile Include="Assets\Scripts\ArrowGame.cs" />
+    <Compile Include="Assets\Scripts\BallBehavior.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
